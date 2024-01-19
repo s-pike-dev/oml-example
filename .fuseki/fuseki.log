@@ -1,0 +1,389 @@
+[2024-01-18 14:25:31] Server     INFO  Apache Jena Fuseki 4.6.1
+[2024-01-18 14:25:31] Server     INFO  Configuration file: ../.fuseki.ttl
+[2024-01-18 14:25:31] Server     INFO  Path = /tutorial2
+[2024-01-18 14:25:31] Server     INFO  System
+[2024-01-18 14:25:31] Server     INFO    Memory: 3.9 GiB
+[2024-01-18 14:25:31] Server     INFO    Java:   17.0.8.1
+[2024-01-18 14:25:31] Server     INFO    OS:     Windows 10 10.0 amd64
+[2024-01-18 14:25:31] Server     INFO    PID:    1240
+[2024-01-18 14:25:31] Server     INFO  Start Fuseki (http=3030)
+[2024-01-18 14:43:33] Fuseki     INFO  [1] GET http://localhost:3030/tutorial2
+[2024-01-18 14:43:33] Fuseki     INFO  [1] 200 OK (25 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [2] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 14:43:33] Fuseki     INFO  [2] Body: Content-Length=7991, Content-Type=text/turtle, Charset=null => Turtle : Count=83 Triples=83 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [2] 201 Created (55 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [3] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 14:43:33] Fuseki     INFO  [3] Body: Content-Length=10529, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=80 Triples=80 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [3] 201 Created (87 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [4] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 14:43:33] Fuseki     INFO  [4] Body: Content-Length=2532, Content-Type=text/turtle, Charset=null => Turtle : Count=30 Triples=30 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [4] 201 Created (9 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [5] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 14:43:33] Fuseki     INFO  [5] Body: Content-Length=2300, Content-Type=text/turtle, Charset=null => Turtle : Count=28 Triples=28 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [5] 201 Created (8 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [6] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 14:43:33] Fuseki     INFO  [6] Body: Content-Length=1013, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=4 Triples=4 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [6] 201 Created (7 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [7] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 14:43:33] Fuseki     INFO  [7] Body: Content-Length=2432, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=16 Triples=16 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [7] 201 Created (9 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [8] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 14:43:33] Fuseki     INFO  [8] Body: Content-Length=1452, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=4 Triples=4 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [8] 201 Created (9 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [9] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 14:43:33] Fuseki     INFO  [9] Body: Content-Length=6586, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 14:43:33] Fuseki     INFO  [9] 201 Created (12 ms)
+[2024-01-18 14:43:33] Fuseki     INFO  [10] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?o1_id%20?o1_name%20?o2_id%20?o2_name%0AWHERE%0A%20%20%7B%20?o1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o1_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:aggregates%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasIdentifier%20%20%20%20?o2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o2_name%0A%20%20%7D%0AORDER%20BY%20?o1_id%20?o2_id%0A
+[2024-01-18 14:43:33] Fuseki     INFO  [10] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?o1_id ?o1_name ?o2_id ?o2_name WHERE   { ?o1   a                     mission:Objective ;           base:hasIdentifier    ?o1_id ;           base:hasCanonicalName  ?o1_name ;           base:aggregates       _:b0 .     _:b0  base:hasIdentifier    ?o2_id ;           base:hasCanonicalName  ?o2_name   } ORDER BY ?o1_id ?o2_id 
+[2024-01-18 14:43:33] Fuseki     INFO  [10] 200 OK (66 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [11] GET http://localhost:3030/tutorial2
+[2024-01-18 15:03:51] Fuseki     INFO  [11] 200 OK (43 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [12] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 15:03:51] Fuseki     INFO  [12] 204 No Content (5 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [13] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 15:03:51] Fuseki     INFO  [13] 204 No Content (2 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [14] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 15:03:51] Fuseki     INFO  [14] 204 No Content (1 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [15] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 15:03:51] Fuseki     INFO  [15] 204 No Content (3 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [16] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 15:03:51] Fuseki     INFO  [16] 204 No Content (5 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [17] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 15:03:51] Fuseki     INFO  [17] 204 No Content (2 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [18] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 15:03:51] Fuseki     INFO  [18] 204 No Content (1 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [19] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 15:03:51] Fuseki     INFO  [19] 204 No Content (4 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [20] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 15:03:51] Fuseki     INFO  [20] Body: Content-Length=2927, Content-Type=text/turtle, Charset=null => Turtle : Count=35 Triples=35 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [20] 201 Created (9 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [21] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 15:03:51] Fuseki     INFO  [21] Body: Content-Length=8875, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=70 Triples=70 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [21] 201 Created (16 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [22] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 15:03:51] Fuseki     INFO  [22] Body: Content-Length=1101, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=5 Triples=5 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [22] 201 Created (6 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [23] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 15:03:51] Fuseki     INFO  [23] Body: Content-Length=6586, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [23] 201 Created (10 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [24] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 15:03:51] Fuseki     INFO  [24] Body: Content-Length=11246, Content-Type=text/turtle, Charset=null => Turtle : Count=117 Triples=117 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [24] 201 Created (13 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [25] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 15:03:51] Fuseki     INFO  [25] Body: Content-Length=10529, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=80 Triples=80 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [25] 201 Created (14 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [26] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 15:03:51] Fuseki     INFO  [26] Body: Content-Length=3290, Content-Type=text/turtle, Charset=null => Turtle : Count=38 Triples=38 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [26] 201 Created (7 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [27] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 15:03:51] Fuseki     INFO  [27] Body: Content-Length=4501, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=26 Triples=26 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [27] 201 Created (8 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [28] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 15:03:51] Fuseki     INFO  [28] Body: Content-Length=1766, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=13 Triples=13 Quads=0
+[2024-01-18 15:03:51] Fuseki     INFO  [28] 201 Created (6 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [29] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?o1_id%20?o1_name%20?o2_id%20?o2_name%0AWHERE%0A%20%20%7B%20?o1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o1_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:aggregates%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasIdentifier%20%20%20%20?o2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o2_name%0A%20%20%7D%0AORDER%20BY%20?o1_id%20?o2_id%0A
+[2024-01-18 15:03:51] Fuseki     INFO  [29] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?o1_id ?o1_name ?o2_id ?o2_name WHERE   { ?o1   a                     mission:Objective ;           base:hasIdentifier    ?o1_id ;           base:hasCanonicalName  ?o1_name ;           base:aggregates       _:b0 .     _:b0  base:hasIdentifier    ?o2_id ;           base:hasCanonicalName  ?o2_name   } ORDER BY ?o1_id ?o2_id 
+[2024-01-18 15:03:51] Fuseki     INFO  [30] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?m_id%20?m_name%20?o_id%20?o_name%0AWHERE%0A%20%20%7B%20?m%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Mission%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?m_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?m_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:pursues%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o_name%0A%20%20%7D%0AORDER%20BY%20?m_id%20?o_id%0A
+[2024-01-18 15:03:51] Fuseki     INFO  [30] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?m_id ?m_name ?o_id ?o_name WHERE   { ?m    a                     mission:Mission ;           base:hasIdentifier    ?m_id ;           base:hasCanonicalName  ?m_name ;           mission:pursues       _:b0 .     _:b0  a                     mission:Objective ;           base:hasIdentifier    ?o_id ;           base:hasCanonicalName  ?o_name   } ORDER BY ?m_id ?o_id 
+[2024-01-18 15:03:51] Fuseki     INFO  [29] 200 OK (8 ms)
+[2024-01-18 15:03:51] Fuseki     INFO  [30] 200 OK (7 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [31] GET http://localhost:3030/tutorial2
+[2024-01-18 16:19:45] Fuseki     INFO  [31] 200 OK (34 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [32] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:19:45] Fuseki     INFO  [32] 204 No Content (3 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [33] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:19:45] Fuseki     INFO  [33] 204 No Content (3 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [34] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:19:45] Fuseki     INFO  [34] 204 No Content (1 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [35] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:19:45] Fuseki     INFO  [35] 204 No Content (2 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [36] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:19:45] Fuseki     INFO  [36] 204 No Content (2 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [37] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:19:45] Fuseki     INFO  [37] 204 No Content (2 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [38] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:19:45] Fuseki     INFO  [38] 204 No Content (2 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [39] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:19:45] Fuseki     INFO  [39] 204 No Content (1 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [40] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:19:45] Fuseki     INFO  [40] 204 No Content (2 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [41] POST http://localhost:3030/tutorial2?graph=http://bipm.org/jcgm/vim4
+[2024-01-18 16:19:45] Fuseki     INFO  [41] Body: Content-Length=187945, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1807 Triples=1807 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [41] 201 Created (170 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [42] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:19:45] Fuseki     INFO  [42] Body: Content-Length=23205, Content-Type=text/turtle, Charset=null => Turtle : Count=339 Triples=339 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [42] 201 Created (15 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [43] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:19:45] Fuseki     INFO  [43] Body: Content-Length=17257, Content-Type=text/turtle, Charset=null => Turtle : Count=227 Triples=227 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [43] 201 Created (14 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [44] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:19:45] Fuseki     INFO  [44] Body: Content-Length=113910, Content-Type=text/turtle, Charset=null => Turtle : Count=1381 Triples=1381 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [44] 201 Created (49 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [45] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/components
+[2024-01-18 16:19:45] Fuseki     INFO  [45] Body: Content-Length=11031, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=80 Triples=80 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [45] 201 Created (10 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [46] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:19:45] Fuseki     INFO  [46] Body: Content-Length=5700, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=36 Triples=36 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [46] 201 Created (7 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [47] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:19:45] Fuseki     INFO  [47] Body: Content-Length=8744, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=140 Triples=140 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [47] 201 Created (16 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [48] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:19:45] Fuseki     INFO  [48] Body: Content-Length=189959, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1933 Triples=1933 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [48] 201 Created (89 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [49] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-1087-1
+[2024-01-18 16:19:45] Fuseki     INFO  [49] Body: Content-Length=8160, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=63 Triples=63 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [49] 201 Created (11 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [50] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-4.1
+[2024-01-18 16:19:45] Fuseki     INFO  [50] Body: Content-Length=5744, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [50] 201 Created (7 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [51] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:19:45] Fuseki     INFO  [51] Body: Content-Length=15198, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=131 Triples=131 Quads=0
+[2024-01-18 16:19:45] Fuseki     INFO  [51] 201 Created (10 ms)
+[2024-01-18 16:19:45] Fuseki     INFO  [52] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/masses
+[2024-01-18 16:19:46] Fuseki     INFO  [52] Body: Content-Length=13629, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=67 Triples=67 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [52] 201 Created (8 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [53] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:19:46] Fuseki     INFO  [53] Body: Content-Length=6586, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [53] 201 Created (5 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [54] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:19:46] Fuseki     INFO  [54] Body: Content-Length=16152, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=132 Triples=132 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [54] 201 Created (12 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [55] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-1
+[2024-01-18 16:19:46] Fuseki     INFO  [55] Body: Content-Length=11534, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=124 Triples=124 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [55] 201 Created (8 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [56] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mechanical
+[2024-01-18 16:19:46] Fuseki     INFO  [56] Body: Content-Length=3267, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=26 Triples=26 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [56] 201 Created (5 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [57] POST http://localhost:3030/tutorial2?graph=http://purl.org/dc/elements/1.1
+[2024-01-18 16:19:46] Fuseki     INFO  [57] Body: Content-Length=3542, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=22 Triples=22 Quads=0
+[2024-01-18 16:19:46] Fuseki     INFO  [57] 201 Created (4 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [58] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20vim4:%20%3Chttp://bipm.org/jcgm/vim4%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?c1_id%20?c1_name%20?c1_mass%20?c2_id%20?c2_name%0AWHERE%0A%20%20%7B%20?c1%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Component%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?c1_id%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c1_name%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1%20%20base:isContainedIn%20%20%20%20?c2%20.%0A%20%20%20%20%20%20%20%20?c2%20%20base:hasIdentifier%20%20%20%20?c2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c2_name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1_mass_mag%20%20vim4:characterizes%20%20?c1%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20vim4:hasDoubleNumber%20%20?c1_mass%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0AORDER%20BY%20?c1_id%20?c2_id%0A
+[2024-01-18 16:19:46] Fuseki     INFO  [58] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  vim4: <http://bipm.org/jcgm/vim4#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?c1_id ?c1_name ?c1_mass ?c2_id ?c2_name WHERE   { ?c1  a                     mission:Component ;          base:hasIdentifier    ?c1_id ;          base:hasCanonicalName  ?c1_name     OPTIONAL       { ?c1  base:isContainedIn    ?c2 .         ?c2  base:hasIdentifier    ?c2_id ;              base:hasCanonicalName  ?c2_name       }     OPTIONAL       { ?c1_mass_mag  vim4:characterizes  ?c1 ;                   vim4:hasDoubleNumber  ?c1_mass       }   } ORDER BY ?c1_id ?c2_id 
+[2024-01-18 16:19:46] Fuseki     INFO  [59] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?o1_id%20?o1_name%20?o2_id%20?o2_name%0AWHERE%0A%20%20%7B%20?o1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o1_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:aggregates%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasIdentifier%20%20%20%20?o2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o2_name%0A%20%20%7D%0AORDER%20BY%20?o1_id%20?o2_id%0A
+[2024-01-18 16:19:46] Fuseki     INFO  [60] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?m_id%20?m_name%20?o_id%20?o_name%0AWHERE%0A%20%20%7B%20?m%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Mission%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?m_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?m_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:pursues%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o_name%0A%20%20%7D%0AORDER%20BY%20?m_id%20?o_id%0A
+[2024-01-18 16:19:46] Fuseki     INFO  [59] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?o1_id ?o1_name ?o2_id ?o2_name WHERE   { ?o1   a                     mission:Objective ;           base:hasIdentifier    ?o1_id ;           base:hasCanonicalName  ?o1_name ;           base:aggregates       _:b0 .     _:b0  base:hasIdentifier    ?o2_id ;           base:hasCanonicalName  ?o2_name   } ORDER BY ?o1_id ?o2_id 
+[2024-01-18 16:19:46] Fuseki     INFO  [60] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?m_id ?m_name ?o_id ?o_name WHERE   { ?m    a                     mission:Mission ;           base:hasIdentifier    ?m_id ;           base:hasCanonicalName  ?m_name ;           mission:pursues       _:b0 .     _:b0  a                     mission:Objective ;           base:hasIdentifier    ?o_id ;           base:hasCanonicalName  ?o_name   } ORDER BY ?m_id ?o_id 
+[2024-01-18 16:19:46] Fuseki     INFO  [60] 200 OK (4 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [59] 200 OK (5 ms)
+[2024-01-18 16:19:46] Fuseki     INFO  [58] 200 OK (19 ms)
+[2024-01-18 16:24:30] Fuseki     INFO  [61] GET http://localhost:3030/tutorial2
+[2024-01-18 16:24:31] Fuseki     INFO  [61] 200 OK (184 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [62] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-4.1
+[2024-01-18 16:24:31] Fuseki     INFO  [62] 204 No Content (4 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [63] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/masses
+[2024-01-18 16:24:31] Fuseki     INFO  [63] 204 No Content (4 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [64] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:24:31] Fuseki     INFO  [64] 204 No Content (3 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [65] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/components
+[2024-01-18 16:24:31] Fuseki     INFO  [65] 204 No Content (3 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [66] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-1087-1
+[2024-01-18 16:24:31] Fuseki     INFO  [66] 204 No Content (3 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [67] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:24:31] Fuseki     INFO  [67] 204 No Content (3 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [68] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:24:31] Fuseki     INFO  [68] 204 No Content (3 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [69] DELETE http://localhost:3030/tutorial2?graph=http://purl.org/dc/elements/1.1
+[2024-01-18 16:24:31] Fuseki     INFO  [69] 204 No Content (1 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [70] DELETE http://localhost:3030/tutorial2?graph=http://bipm.org/jcgm/vim4
+[2024-01-18 16:24:31] Fuseki     INFO  [70] 204 No Content (20 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [71] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mechanical
+[2024-01-18 16:24:31] Fuseki     INFO  [71] 204 No Content (2 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [72] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:24:31] Fuseki     INFO  [72] 204 No Content (1 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [73] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:24:31] Fuseki     INFO  [73] 204 No Content (13 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [74] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:24:31] Fuseki     INFO  [74] 204 No Content (6 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [75] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:24:31] Fuseki     INFO  [75] 204 No Content (2 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [76] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-1
+[2024-01-18 16:24:31] Fuseki     INFO  [76] 204 No Content (2 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [77] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:24:31] Fuseki     INFO  [77] 204 No Content (15 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [78] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:24:31] Fuseki     INFO  [78] 204 No Content (2 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [79] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:24:31] Fuseki     INFO  [79] Body: Content-Length=9149, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=148 Triples=148 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [79] 201 Created (13 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [80] POST http://localhost:3030/tutorial2?graph=http://purl.org/dc/elements/1.1
+[2024-01-18 16:24:31] Fuseki     INFO  [80] Body: Content-Length=3542, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=22 Triples=22 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [80] 201 Created (5 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [81] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/requirements
+[2024-01-18 16:24:31] Fuseki     INFO  [81] Body: Content-Length=4698, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=23 Triples=23 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [81] 201 Created (7 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [82] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:24:31] Fuseki     INFO  [82] Body: Content-Length=16152, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=132 Triples=132 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [82] 201 Created (10 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [83] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:24:31] Fuseki     INFO  [83] Body: Content-Length=190141, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1935 Triples=1935 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [83] 201 Created (70 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [84] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:24:31] Fuseki     INFO  [84] Body: Content-Length=6586, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [84] 201 Created (5 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [85] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/components
+[2024-01-18 16:24:31] Fuseki     INFO  [85] Body: Content-Length=11031, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=80 Triples=80 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [85] 201 Created (6 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [86] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:24:31] Fuseki     INFO  [86] Body: Content-Length=24860, Content-Type=text/turtle, Charset=null => Turtle : Count=360 Triples=360 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [86] 201 Created (17 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [87] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-4.1
+[2024-01-18 16:24:31] Fuseki     INFO  [87] Body: Content-Length=5744, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [87] 201 Created (6 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [88] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-1
+[2024-01-18 16:24:31] Fuseki     INFO  [88] Body: Content-Length=11534, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=124 Triples=124 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [88] 201 Created (11 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [89] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:24:31] Fuseki     INFO  [89] Body: Content-Length=27130, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=242 Triples=242 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [89] 201 Created (17 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [90] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mechanical
+[2024-01-18 16:24:31] Fuseki     INFO  [90] Body: Content-Length=3267, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=26 Triples=26 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [90] 201 Created (5 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [91] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-1087-1
+[2024-01-18 16:24:31] Fuseki     INFO  [91] Body: Content-Length=8160, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=63 Triples=63 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [91] 201 Created (9 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [92] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:24:31] Fuseki     INFO  [92] Body: Content-Length=5700, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=36 Triples=36 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [92] 201 Created (7 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [93] POST http://localhost:3030/tutorial2?graph=http://bipm.org/jcgm/vim4
+[2024-01-18 16:24:31] Fuseki     INFO  [93] Body: Content-Length=187945, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1807 Triples=1807 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [93] 201 Created (66 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [94] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:24:31] Fuseki     INFO  [94] Body: Content-Length=124486, Content-Type=text/turtle, Charset=null => Turtle : Count=1478 Triples=1478 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [94] 201 Created (46 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [95] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/interfaces
+[2024-01-18 16:24:31] Fuseki     INFO  [95] Body: Content-Length=6933, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [95] 201 Created (5 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [96] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/masses
+[2024-01-18 16:24:31] Fuseki     INFO  [96] Body: Content-Length=13629, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=67 Triples=67 Quads=0
+[2024-01-18 16:24:31] Fuseki     INFO  [96] 201 Created (8 ms)
+[2024-01-18 16:24:31] Fuseki     INFO  [97] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:24:32] Fuseki     INFO  [97] Body: Content-Length=19013, Content-Type=text/turtle, Charset=null => Turtle : Count=248 Triples=248 Quads=0
+[2024-01-18 16:24:32] Fuseki     INFO  [97] 201 Created (15 ms)
+[2024-01-18 16:24:32] Fuseki     INFO  [98] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20rdfs:%20%3Chttp://www.w3.org/2000/01/rdf-schema%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0APREFIX%20%20oml:%20%20%3Chttp://opencaesar.io/oml%23%3E%0A%0ASELECT%20DISTINCT%20%20?r_id%20?c_name%20?i_name%0AWHERE%0A%20%20%7B%20?r%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Requirement%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?r_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:specifies%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Presents%20%3B%0A%20%20%20%20%20%20%20%20%20%20oml:hasSource%20%20%20%20%20%20%20%20%20_:b1%20.%0A%20%20%20%20_:b1%20%20base:hasCanonicalName%20%20?c_name%20.%0A%20%20%20%20_:b0%20%20oml:hasTarget%20%20%20%20%20%20%20%20%20_:b2%20.%0A%20%20%20%20_:b2%20%20base:hasCanonicalName%20%20?i_name%0A%20%20%7D%0AORDER%20BY%20?r_id%20?c_name%20?i_name%0A
+[2024-01-18 16:24:32] Fuseki     INFO  [98] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#> PREFIX  oml:  <http://opencaesar.io/oml#>  SELECT DISTINCT  ?r_id ?c_name ?i_name WHERE   { ?r    a                     mission:Requirement ;           base:hasIdentifier    ?r_id ;           mission:specifies     _:b0 .     _:b0  a                     mission:Presents ;           oml:hasSource         _:b1 .     _:b1  base:hasCanonicalName  ?c_name .     _:b0  oml:hasTarget         _:b2 .     _:b2  base:hasCanonicalName  ?i_name   } ORDER BY ?r_id ?c_name ?i_name 
+[2024-01-18 16:24:32] Fuseki     INFO  [99] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?o1_id%20?o1_name%20?o2_id%20?o2_name%0AWHERE%0A%20%20%7B%20?o1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o1_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:aggregates%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasIdentifier%20%20%20%20?o2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o2_name%0A%20%20%7D%0AORDER%20BY%20?o1_id%20?o2_id%0A
+[2024-01-18 16:24:32] Fuseki     INFO  [100] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?m_id%20?m_name%20?o_id%20?o_name%0AWHERE%0A%20%20%7B%20?m%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Mission%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?m_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?m_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:pursues%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o_name%0A%20%20%7D%0AORDER%20BY%20?m_id%20?o_id%0A
+[2024-01-18 16:24:32] Fuseki     INFO  [99] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?o1_id ?o1_name ?o2_id ?o2_name WHERE   { ?o1   a                     mission:Objective ;           base:hasIdentifier    ?o1_id ;           base:hasCanonicalName  ?o1_name ;           base:aggregates       _:b0 .     _:b0  base:hasIdentifier    ?o2_id ;           base:hasCanonicalName  ?o2_name   } ORDER BY ?o1_id ?o2_id 
+[2024-01-18 16:24:32] Fuseki     INFO  [100] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?m_id ?m_name ?o_id ?o_name WHERE   { ?m    a                     mission:Mission ;           base:hasIdentifier    ?m_id ;           base:hasCanonicalName  ?m_name ;           mission:pursues       _:b0 .     _:b0  a                     mission:Objective ;           base:hasIdentifier    ?o_id ;           base:hasCanonicalName  ?o_name   } ORDER BY ?m_id ?o_id 
+[2024-01-18 16:24:32] Fuseki     INFO  [101] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20vim4:%20%3Chttp://bipm.org/jcgm/vim4%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?c1_id%20?c1_name%20?c1_mass%20?c2_id%20?c2_name%0AWHERE%0A%20%20%7B%20?c1%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Component%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?c1_id%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c1_name%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1%20%20base:isContainedIn%20%20%20%20?c2%20.%0A%20%20%20%20%20%20%20%20?c2%20%20base:hasIdentifier%20%20%20%20?c2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c2_name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1_mass_mag%20%20vim4:characterizes%20%20?c1%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20vim4:hasDoubleNumber%20%20?c1_mass%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0AORDER%20BY%20?c1_id%20?c2_id%0A
+[2024-01-18 16:24:32] Fuseki     INFO  [101] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  vim4: <http://bipm.org/jcgm/vim4#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?c1_id ?c1_name ?c1_mass ?c2_id ?c2_name WHERE   { ?c1  a                     mission:Component ;          base:hasIdentifier    ?c1_id ;          base:hasCanonicalName  ?c1_name     OPTIONAL       { ?c1  base:isContainedIn    ?c2 .         ?c2  base:hasIdentifier    ?c2_id ;              base:hasCanonicalName  ?c2_name       }     OPTIONAL       { ?c1_mass_mag  vim4:characterizes  ?c1 ;                   vim4:hasDoubleNumber  ?c1_mass       }   } ORDER BY ?c1_id ?c2_id 
+[2024-01-18 16:24:32] Fuseki     INFO  [100] 200 OK (5 ms)
+[2024-01-18 16:24:32] Fuseki     INFO  [98] 200 OK (7 ms)
+[2024-01-18 16:24:32] Fuseki     INFO  [99] 200 OK (6 ms)
+[2024-01-18 16:24:32] Fuseki     INFO  [101] 200 OK (12 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [102] GET http://localhost:3030/tutorial2
+[2024-01-18 16:28:08] Fuseki     INFO  [102] 200 OK (142 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [103] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-4.1
+[2024-01-18 16:28:08] Fuseki     INFO  [103] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [104] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/masses
+[2024-01-18 16:28:08] Fuseki     INFO  [104] 204 No Content (3 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [105] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:28:08] Fuseki     INFO  [105] 204 No Content (4 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [106] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/components
+[2024-01-18 16:28:08] Fuseki     INFO  [106] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [107] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-1087-1
+[2024-01-18 16:28:08] Fuseki     INFO  [107] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [108] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/requirements
+[2024-01-18 16:28:08] Fuseki     INFO  [108] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [109] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:28:08] Fuseki     INFO  [109] 204 No Content (5 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [110] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:28:08] Fuseki     INFO  [110] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [111] DELETE http://localhost:3030/tutorial2?graph=http://purl.org/dc/elements/1.1
+[2024-01-18 16:28:08] Fuseki     INFO  [111] 204 No Content (1 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [112] DELETE http://localhost:3030/tutorial2?graph=http://bipm.org/jcgm/vim4
+[2024-01-18 16:28:08] Fuseki     INFO  [112] 204 No Content (19 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [113] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mechanical
+[2024-01-18 16:28:08] Fuseki     INFO  [113] 204 No Content (1 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [114] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:28:08] Fuseki     INFO  [114] 204 No Content (1 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [115] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:28:08] Fuseki     INFO  [115] 204 No Content (15 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [116] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/interfaces
+[2024-01-18 16:28:08] Fuseki     INFO  [116] 204 No Content (1 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [117] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:28:08] Fuseki     INFO  [117] 204 No Content (8 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [118] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:28:08] Fuseki     INFO  [118] 204 No Content (2 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [119] DELETE http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-1
+[2024-01-18 16:28:08] Fuseki     INFO  [119] 204 No Content (6 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [120] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:28:08] Fuseki     INFO  [120] 204 No Content (18 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [121] DELETE http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:28:08] Fuseki     INFO  [121] 204 No Content (4 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [122] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mechanical
+[2024-01-18 16:28:08] Fuseki     INFO  [122] Body: Content-Length=3267, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=26 Triples=26 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [122] 201 Created (5 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [123] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-4.1
+[2024-01-18 16:28:08] Fuseki     INFO  [123] Body: Content-Length=5744, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [123] 201 Created (8 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [124] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/interfaces
+[2024-01-18 16:28:08] Fuseki     INFO  [124] Body: Content-Length=6933, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [124] 201 Created (7 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [125] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/masses
+[2024-01-18 16:28:08] Fuseki     INFO  [125] Body: Content-Length=13629, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=67 Triples=67 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [125] 201 Created (8 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [126] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/bundle
+[2024-01-18 16:28:08] Fuseki     INFO  [126] Body: Content-Length=9351, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=152 Triples=152 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [126] 201 Created (16 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [127] POST http://localhost:3030/tutorial2?graph=http://purl.org/dc/elements/1.1
+[2024-01-18 16:28:08] Fuseki     INFO  [127] Body: Content-Length=3542, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=22 Triples=22 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [127] 201 Created (6 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [128] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-1087-1
+[2024-01-18 16:28:08] Fuseki     INFO  [128] Body: Content-Length=8160, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=63 Triples=63 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [128] 201 Created (9 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [129] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/properties
+[2024-01-18 16:28:08] Fuseki     INFO  [129] Body: Content-Length=19814, Content-Type=text/turtle, Charset=null => Turtle : Count=258 Triples=258 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [129] 201 Created (20 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [130] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/mission
+[2024-01-18 16:28:08] Fuseki     INFO  [130] Body: Content-Length=40243, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=359 Triples=359 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [130] 201 Created (21 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [131] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/junctions
+[2024-01-18 16:28:08] Fuseki     INFO  [131] Body: Content-Length=4172, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=21 Triples=21 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [131] 201 Created (6 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [132] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle
+[2024-01-18 16:28:08] Fuseki     INFO  [132] Body: Content-Length=190230, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1936 Triples=1936 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [132] 201 Created (55 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [133] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/components
+[2024-01-18 16:28:08] Fuseki     INFO  [133] Body: Content-Length=11031, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=80 Triples=80 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [133] 201 Created (5 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [134] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/classes
+[2024-01-18 16:28:08] Fuseki     INFO  [134] Body: Content-Length=25540, Content-Type=text/turtle, Charset=null => Turtle : Count=369 Triples=369 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [134] 201 Created (10 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [135] POST http://localhost:3030/tutorial2?graph=http://iso.org/iso-80000-1
+[2024-01-18 16:28:08] Fuseki     INFO  [135] Body: Content-Length=11534, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=124 Triples=124 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [135] 201 Created (9 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [136] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/missions
+[2024-01-18 16:28:08] Fuseki     INFO  [136] Body: Content-Length=5700, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=36 Triples=36 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [136] 201 Created (4 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [137] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/objectives
+[2024-01-18 16:28:08] Fuseki     INFO  [137] Body: Content-Length=6586, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=41 Triples=41 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [137] 201 Created (4 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [138] POST http://localhost:3030/tutorial2?graph=http://bipm.org/jcgm/vim4
+[2024-01-18 16:28:08] Fuseki     INFO  [138] Body: Content-Length=187945, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=1807 Triples=1807 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [138] 201 Created (45 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [139] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/requirements
+[2024-01-18 16:28:08] Fuseki     INFO  [139] Body: Content-Length=4698, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=23 Triples=23 Quads=0
+[2024-01-18 16:28:08] Fuseki     INFO  [139] 201 Created (4 ms)
+[2024-01-18 16:28:08] Fuseki     INFO  [140] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/description/bundle/individuals
+[2024-01-18 16:28:09] Fuseki     INFO  [140] Body: Content-Length=127777, Content-Type=text/turtle, Charset=null => Turtle : Count=1506 Triples=1506 Quads=0
+[2024-01-18 16:28:09] Fuseki     INFO  [140] 201 Created (31 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [141] POST http://localhost:3030/tutorial2?graph=http://example.com/tutorial2/vocabulary/base
+[2024-01-18 16:28:09] Fuseki     INFO  [141] Body: Content-Length=16152, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=132 Triples=132 Quads=0
+[2024-01-18 16:28:09] Fuseki     INFO  [141] 201 Created (7 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [142] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?c1_name%20?c2_name%0AWHERE%0A%20%20%7B%20?c1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Component%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:connectsTo%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasCanonicalName%20%20?c2_name%0A%20%20%7D%0AORDER%20BY%20?c1_name%20?c2_name%0A
+[2024-01-18 16:28:09] Fuseki     INFO  [142] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?c1_name ?c2_name WHERE   { ?c1   a                     mission:Component ;           base:hasCanonicalName  ?c1_name ;           mission:connectsTo    _:b0 .     _:b0  base:hasCanonicalName  ?c2_name   } ORDER BY ?c1_name ?c2_name 
+[2024-01-18 16:28:09] Fuseki     INFO  [143] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?o1_id%20?o1_name%20?o2_id%20?o2_name%0AWHERE%0A%20%20%7B%20?o1%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o1_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:aggregates%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasIdentifier%20%20%20%20?o2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o2_name%0A%20%20%7D%0AORDER%20BY%20?o1_id%20?o2_id%0A
+[2024-01-18 16:28:09] Fuseki     INFO  [144] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20vim4:%20%3Chttp://bipm.org/jcgm/vim4%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?c1_id%20?c1_name%20?c1_mass%20?c2_id%20?c2_name%0AWHERE%0A%20%20%7B%20?c1%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Component%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?c1_id%20%3B%0A%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c1_name%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1%20%20base:isContainedIn%20%20%20%20?c2%20.%0A%20%20%20%20%20%20%20%20?c2%20%20base:hasIdentifier%20%20%20%20?c2_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?c2_name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20OPTIONAL%0A%20%20%20%20%20%20%7B%20?c1_mass_mag%20%20vim4:characterizes%20%20?c1%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20vim4:hasDoubleNumber%20%20?c1_mass%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0AORDER%20BY%20?c1_id%20?c2_id%0A
+[2024-01-18 16:28:09] Fuseki     INFO  [143] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?o1_id ?o1_name ?o2_id ?o2_name WHERE   { ?o1   a                     mission:Objective ;           base:hasIdentifier    ?o1_id ;           base:hasCanonicalName  ?o1_name ;           base:aggregates       _:b0 .     _:b0  base:hasIdentifier    ?o2_id ;           base:hasCanonicalName  ?o2_name   } ORDER BY ?o1_id ?o2_id 
+[2024-01-18 16:28:09] Fuseki     INFO  [144] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  vim4: <http://bipm.org/jcgm/vim4#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?c1_id ?c1_name ?c1_mass ?c2_id ?c2_name WHERE   { ?c1  a                     mission:Component ;          base:hasIdentifier    ?c1_id ;          base:hasCanonicalName  ?c1_name     OPTIONAL       { ?c1  base:isContainedIn    ?c2 .         ?c2  base:hasIdentifier    ?c2_id ;              base:hasCanonicalName  ?c2_name       }     OPTIONAL       { ?c1_mass_mag  vim4:characterizes  ?c1 ;                   vim4:hasDoubleNumber  ?c1_mass       }   } ORDER BY ?c1_id ?c2_id 
+[2024-01-18 16:28:09] Fuseki     INFO  [145] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20rdfs:%20%3Chttp://www.w3.org/2000/01/rdf-schema%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0APREFIX%20%20oml:%20%20%3Chttp://opencaesar.io/oml%23%3E%0A%0ASELECT%20DISTINCT%20%20?r_id%20?c_name%20?i_name%0AWHERE%0A%20%20%7B%20?r%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Requirement%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?r_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:specifies%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Presents%20%3B%0A%20%20%20%20%20%20%20%20%20%20oml:hasSource%20%20%20%20%20%20%20%20%20_:b1%20.%0A%20%20%20%20_:b1%20%20base:hasCanonicalName%20%20?c_name%20.%0A%20%20%20%20_:b0%20%20oml:hasTarget%20%20%20%20%20%20%20%20%20_:b2%20.%0A%20%20%20%20_:b2%20%20base:hasCanonicalName%20%20?i_name%0A%20%20%7D%0AORDER%20BY%20?r_id%20?c_name%20?i_name%0A
+[2024-01-18 16:28:09] Fuseki     INFO  [145] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#> PREFIX  oml:  <http://opencaesar.io/oml#>  SELECT DISTINCT  ?r_id ?c_name ?i_name WHERE   { ?r    a                     mission:Requirement ;           base:hasIdentifier    ?r_id ;           mission:specifies     _:b0 .     _:b0  a                     mission:Presents ;           oml:hasSource         _:b1 .     _:b1  base:hasCanonicalName  ?c_name .     _:b0  oml:hasTarget         _:b2 .     _:b2  base:hasCanonicalName  ?i_name   } ORDER BY ?r_id ?c_name ?i_name 
+[2024-01-18 16:28:09] Fuseki     INFO  [146] GET http://localhost:3030/tutorial2/sparql?query=PREFIX%20%20mission:%20%3Chttp://example.com/tutorial2/vocabulary/mission%23%3E%0APREFIX%20%20base:%20%3Chttp://example.com/tutorial2/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?m_id%20?m_name%20?o_id%20?o_name%0AWHERE%0A%20%20%7B%20?m%20%20%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Mission%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?m_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?m_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20mission:pursues%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mission:Objective%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasIdentifier%20%20%20%20?o_id%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasCanonicalName%20%20?o_name%0A%20%20%7D%0AORDER%20BY%20?m_id%20?o_id%0A
+[2024-01-18 16:28:09] Fuseki     INFO  [146] Query = PREFIX  mission: <http://example.com/tutorial2/vocabulary/mission#> PREFIX  base: <http://example.com/tutorial2/vocabulary/base#>  SELECT DISTINCT  ?m_id ?m_name ?o_id ?o_name WHERE   { ?m    a                     mission:Mission ;           base:hasIdentifier    ?m_id ;           base:hasCanonicalName  ?m_name ;           mission:pursues       _:b0 .     _:b0  a                     mission:Objective ;           base:hasIdentifier    ?o_id ;           base:hasCanonicalName  ?o_name   } ORDER BY ?m_id ?o_id 
+[2024-01-18 16:28:09] Fuseki     INFO  [142] 200 OK (5 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [143] 200 OK (4 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [146] 200 OK (4 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [145] 200 OK (5 ms)
+[2024-01-18 16:28:09] Fuseki     INFO  [144] 200 OK (10 ms)
